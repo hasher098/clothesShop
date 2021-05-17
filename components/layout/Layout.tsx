@@ -5,6 +5,7 @@ import {
   AiOutlineShoppingCart,
   AiOutlineUser,
 } from "react-icons/ai";
+
 const Layout = (props: any) => {
   return (
     <div className={styles.navBar}>
