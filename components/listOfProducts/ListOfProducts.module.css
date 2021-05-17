@@ -3,9 +3,11 @@
     display:flex;
     justify-content: center;
     align-items: center;;
+    padding:0px;
+    margin:0px;
+    margin-right:10px;
 }
 .paginationItem{
-    margin-top:5px;
     width:40px;
     height:40px;
     display: flex;
@@ -16,7 +18,6 @@
     cursor:pointer;
 }
 .chosenPage{
-    margin-top:5px;
     width:40px;
     height:40px;
     display: flex;
@@ -27,3 +28,8 @@
     cursor:pointer;
 }
 
+.optionBar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,4 +1,5 @@
 import styles from "./Layout.module.css";
+import Link from "next/link";
 import {
   AiOutlineMenu,
   AiOutlineSearch,
@@ -13,11 +14,18 @@ const Layout = (props: any) => {
         <AiOutlineMenu className={styles.icon}></AiOutlineMenu>
       </div>
       <div className={styles.centerPart}>
-        <p>Clothes Shop</p>
+        <Link href="/">
+          <p>Clothes Shop</p>
+        </Link>
       </div>
       <div className={styles.rightPart}>
         <AiOutlineSearch className={styles.icon}></AiOutlineSearch>
-        <AiOutlineShoppingCart className={styles.icon}></AiOutlineShoppingCart>
+        <Link href="/cart">
+          <AiOutlineShoppingCart
+            className={styles.icon}
+          ></AiOutlineShoppingCart>
+        </Link>
+
         <AiOutlineUser className={styles.icon}></AiOutlineUser>
       </div>
     </div>

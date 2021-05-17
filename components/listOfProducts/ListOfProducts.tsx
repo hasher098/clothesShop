@@ -21,7 +21,7 @@ const ListOfProducts = (props: any) => {
 
   //Logic for handling current page
   const handleNumberClick = (event) => {
-    setCurrentPage(event.target.id);
+    setCurrentPage(Number(event.target.id));
   };
 
   //Logic for page numbers
@@ -33,9 +33,10 @@ const ListOfProducts = (props: any) => {
     setCurrentPage(1);
     setPageNumbers(pageNumbersArr);
   }, [props.products, itemsPerPage]);
+
   return (
     <div>
-      <div>
+      <div className={styles.optionBar}>
         <ul className={styles.unorderedList}>
           <li
             className={styles.paginationItem}
@@ -79,15 +80,15 @@ const ListOfProducts = (props: any) => {
             <BiLastPage></BiLastPage>
           </li>
         </ul>
+        <Dropdown
+          options={options}
+          onChange={(event) => {
+            setItemPerPage(Number(event.value));
+          }}
+          value={defaultOption}
+          placeholder="Select an option"
+        />
       </div>
-      <Dropdown
-        options={options}
-        onChange={(event) => {
-          setItemPerPage(Number(event.value));
-        }}
-        value={defaultOption}
-        placeholder="Select an option"
-      />
 
       <Container>
         <Row>

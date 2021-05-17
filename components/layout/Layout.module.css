@@ -35,6 +35,8 @@
     flex-grow:3;
   }
 
+
+
   .rightPart{
     flex-grow:1;
     display: flex;

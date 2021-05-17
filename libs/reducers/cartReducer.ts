@@ -13,10 +13,15 @@ function clear() {
 }
 
 function removeShoppingCart(data) {
-  let shoppings = shopInitialState.shopping;
-  shoppings.filter((item) => item.product.id !== data.product.id);
-  setCookie(CARD, shoppings);
-  return shoppings;
+  const shoppings = shopInitialState.shopping;
+  console.log(shoppings);
+  const filtered = shoppings.filter((item) => {
+    return item.product.id !== data.product.product.id;
+  });
+  //tu cos nie dziala
+  console.log(filtered);
+  setCookie(CARD, filtered);
+  return filtered;
 }
 
 function increment(data) {
@@ -78,6 +83,12 @@ export default function reducer(state = shopInitialState, action) {
       state = {
         shopping: addShoppingCart(payload),
       };
+      return state;
+    case actionShopping.DELETE:
+      state = {
+        shopping: removeShoppingCart(payload),
+      };
+
       return state;
     case actionShopping.CLEAR:
       state = {

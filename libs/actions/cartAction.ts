@@ -2,6 +2,7 @@ export const actionShopping = {
   ADD: "ADD",
   CLEAR: "CLEAR",
   FETCH: "FETCH",
+  DELETE: "DELETE",
 };
 
 export const addShopping = (product) => (dispatch) => {
@@ -23,5 +24,14 @@ export const fetchShopping = () => (dispatch) => {
 export const clearShopping = () => (dispatch) => {
   return dispatch({
     type: actionShopping.CLEAR,
+  });
+};
+
+export const deleteItem = (product) => (dispatch) => {
+  return dispatch({
+    type: actionShopping.DELETE,
+    payload: {
+      product,
+    },
   });
 };
