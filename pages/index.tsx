@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Layout from "../components/layout/Layout";
 import ListOfProducts from "../components/listOfProducts/ListOfProducts";
-
+import { server } from "../config/index";
 export default function Home({ products }: any) {
   return (
     <>
@@ -13,10 +13,9 @@ export default function Home({ products }: any) {
   );
 }
 
-export async function getStaticProps() {
-  const res = await fetch("https://fakestoreapi.com/products");
+export const getStaticProps = async () => {
+  const res = await fetch(`${server}/api`);
   const products = await res.json();
-
   if (!products) {
     return {
       notFound: true,
@@ -27,4 +26,4 @@ export async function getStaticProps() {
       products,
     },
   };
-}
+};
