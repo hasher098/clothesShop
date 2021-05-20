@@ -48,17 +48,17 @@ function getShopping() {
 
 function addShoppingCart(data) {
   let shoppings = getCookie(CARD);
-
+  console.log(data);
   let isExisted = shoppings.some((item) => item.id === data.id);
   if (isExisted) {
     shoppings.forEach((item) => {
       if (item.id === data.id) {
-        item.quantity += 1;
+        item.quantity += data.quantity;
       }
       return item;
     });
   } else {
-    shoppings.push({ id: data.id, quantity: 1 });
+    shoppings.push({ id: data.id, quantity: data.quantity });
   }
   setCookie(CARD, shoppings);
   return shoppings;

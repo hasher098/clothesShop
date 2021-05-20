@@ -1,0 +1,88 @@
+.imageBox{
+    border-right:1px black solid;
+    padding:25px;
+    text-align:center;
+    height:80%
+}
+
+.container{
+    margin-Top:20px;
+    border:1px black solid;
+}
+
+.description{
+    padding:35px;
+}
+
+.details{
+    height:55%;
+}
+.price{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+
+
+.minusButton{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+    padding: 2px;
+    cursor: pointer;
+    color: #000;
+    
+border: 1px black solid;
+text-align: center;
+}
+
+.plusButton{
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+    padding: 2px;
+    cursor: pointer;
+    color: #000;
+    
+border: 1px black solid;
+text-align: center;
+}
+
+.valueInput{
+    max-width:66px;
+    height: 30px;
+    font-size: 13px;
+    text-align: center;
+    padding: 2px;
+    background-color: #fff;
+    border-top: 1px solid #372e27;
+    border-bottom: 1px solid #372e27;
+    border-left: 0;
+    border-right: 0;
+    vertical-align: top;
+    color: #000;
+    box-sizing: border-box;
+}
+
+
+.addCartSpan{
+    padding:0px;
+    background-color: white;
+    max-width:66px;
+}
+
+.addCartCol{
+    text-align: center;
+    padding:0px;
+}
+
+.addToCartButton{
+    font-size:12px;
+    background-color: tan;
+    max-width: 126px;
+}

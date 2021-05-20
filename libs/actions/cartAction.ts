@@ -6,11 +6,12 @@ export const actionShopping = {
   CHANGE: "CHANGE",
 };
 
-export const addShopping = (product) => (dispatch) => {
+export const addShopping = (product, quantity) => (dispatch) => {
   return dispatch({
     type: actionShopping.ADD,
     payload: {
       id: product.id,
+      quantity: quantity,
     },
   });
 };
