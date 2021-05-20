@@ -14,7 +14,7 @@ export const products = [
     category: "Energy",
     description:
       "posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum",
-    image: "http://dummyimage.com/206x100.png/cc0000/ffffff",
+    image: "/cl1.jpg",
     price: "$29.05",
     title: "Pepper - Chipotle, Canned",
     image2: "http://dummyimage.com/243x100.png/dddddd/000000",
@@ -24,7 +24,7 @@ export const products = [
     category: "Public Utilities",
     description:
       "consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi",
-    image: "http://dummyimage.com/222x100.png/5fa2dd/ffffff",
+    image: "/cl1.jpg",
     price: "$5.81",
     title: "Wine - Touraine Azay - Le - Rideau",
     image2: "http://dummyimage.com/123x100.png/5fa2dd/ffffff",
@@ -34,7 +34,7 @@ export const products = [
     category: "Finance",
     description:
       "suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula",
-    image: "http://dummyimage.com/130x100.png/5fa2dd/ffffff",
+    image: "/cl1.jpg",
     price: "$60.10",
     title: "Green Tea Refresher",
     image2: "http://dummyimage.com/210x100.png/dddddd/000000",
@@ -44,7 +44,7 @@ export const products = [
     category: "Consumer Services",
     description:
       "massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia",
-    image: "http://dummyimage.com/121x100.png/ff4444/ffffff",
+    image: "/cl1.jpg",
     price: "$56.29",
     title: "Turkey - Ground. Lean",
     image2: "http://dummyimage.com/198x100.png/5fa2dd/ffffff",
@@ -213,7 +213,7 @@ export const products = [
     category: "Public Utilities",
     description:
       "quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis",
-    image: "http://dummyimage.com/170x100.png/5fa2dd/ffffff",
+    image: "/cl1.jpg",
     price: "$59.76",
     title: "Aspic - Amber",
     image2: "http://dummyimage.com/179x100.png/5fa2dd/ffffff",
@@ -223,7 +223,7 @@ export const products = [
     category: "n/a",
     description:
       "morbi non lectus aliquam sit amet diam in magna bibendum imperdiet",
-    image: "http://dummyimage.com/147x100.png/ff4444/ffffff",
+    image: "/cl1.jpg",
     price: "$10.83",
     title: "Longan",
     image2: "http://dummyimage.com/219x100.png/5fa2dd/ffffff",

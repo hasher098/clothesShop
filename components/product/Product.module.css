@@ -2,17 +2,44 @@
 display:flex;
 align-items: center;
 justify-content: center;
-border:1px solid lightgray;
+border: 1px solid transparent;
 height:90%;
-padding: 15px;
+padding-bottom: 15px;
+padding-top:15px;
 margin: 15px auto;
 }
-
+.card:hover{
+    border:1px solid black;
+    cursor: pointer;
+}
 .productInfo{
     background:white;
     text-align: center;
+    font-family:"Montserrat";
 }
 
-.addProductButton{
-    
+.productInfo{
+    font-size: 18px;
+    color: #252525;
+}
+
+.cardDetails{
+    text-align:center;
+}
+
+.title{
+    float:right;
+    width:100%;
+}
+
+.price{
+    clear:both
+}
+
+.imageHidden{
+    display:none;
+}
+
+.imageVisible{
+    display:block;
 }

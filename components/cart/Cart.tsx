@@ -51,23 +51,27 @@ const Cart = ({ data }) => {
       {cartProducts &&
         cartProducts.map((item) => (
           <div key={item.product.id} className={styles.cartProduct}>
-            Item: {item.product.title}
-            <button
-              onClick={() => {
-                handleDelete(item);
-              }}
-            >
-              Kasuj to
-            </button>
-            Quantity:
-            <Dropdown
-              options={options}
-              onChange={(event) => {
-                handleChange(item, Number(event.value));
-              }}
-              value={item.quantity.toString()}
-              placeholder="Select an option"
-            />
+            <Container>
+              <Row>
+                Item: {item.product.title}
+                <button
+                  onClick={() => {
+                    handleDelete(item);
+                  }}
+                >
+                  Kasuj to
+                </button>
+                Quantity:
+                <Dropdown
+                  options={options}
+                  onChange={(event) => {
+                    handleChange(item, Number(event.value));
+                  }}
+                  value={item.quantity.toString()}
+                  placeholder="Select an option"
+                />
+              </Row>
+            </Container>
           </div>
         ))}
     </div>

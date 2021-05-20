@@ -1,17 +1,18 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { products } from "../../mock/products";
+import CartProduct from "../../components/cart/cartProduct/CartProduct";
 const ProductDetail = ({ res }) => {
   const router = useRouter();
   const { id } = router.query;
-  console.log(res);
   return (
     <Link href="/clothes">
-      <div>
+      {/* <div>
         Id:{res.id}
         Title:{res.title}
         Price:{res.price}
-      </div>
+      </div> */}
+      <CartProduct data={res}></CartProduct>
     </Link>
   );
 };
