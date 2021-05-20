@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Container, Row, Col } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { addShopping } from "../../libs/actions/cartAction";
+import Link from "next/link";
 
 const Product = (data) => {
   const dispatch = useDispatch();
@@ -37,6 +38,10 @@ const Product = (data) => {
             Add
           </button>
         </div>
+
+        <Link href={`/clothes/${encodeURIComponent(data.data.id)}`}>
+          <p>Jazda</p>
+        </Link>
       </Container>
     </div>
   );

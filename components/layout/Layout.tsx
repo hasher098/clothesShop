@@ -19,14 +19,30 @@ const Layout = (props: any) => {
         </Link>
       </div>
       <div className={styles.rightPart}>
-        <AiOutlineSearch className={styles.icon}></AiOutlineSearch>
         <Link href="/cart">
-          <AiOutlineShoppingCart
-            className={styles.icon}
-          ></AiOutlineShoppingCart>
+          <p>
+            <AiOutlineSearch
+              className={styles.icon}
+              style={{ height: "100%" }}
+            ></AiOutlineSearch>
+          </p>
         </Link>
-
-        <AiOutlineUser className={styles.icon}></AiOutlineUser>
+        <Link href="/cart">
+          <p>
+            <AiOutlineShoppingCart
+              className={styles.icon}
+              style={{ height: "100%" }}
+            ></AiOutlineShoppingCart>
+          </p>
+        </Link>
+        <Link href="/cart">
+          <p>
+            <AiOutlineUser
+              className={styles.icon}
+              style={{ height: "100%" }}
+            ></AiOutlineUser>
+          </p>
+        </Link>
       </div>
     </div>
   );

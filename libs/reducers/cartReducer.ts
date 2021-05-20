@@ -48,56 +48,41 @@ function getShopping() {
 
 function addShoppingCart(data) {
   let shoppings = getCookie(CARD);
-  let isExisted = shoppings.some((item) => item.product.id === data.product.id);
+
+  let isExisted = shoppings.some((item) => item.id === data.id);
   if (isExisted) {
     shoppings.forEach((item) => {
-      if (item.product.id === data.product.id) {
+      if (item.id === data.id) {
         item.quantity += 1;
       }
       return item;
     });
   } else {
-    shoppings.push(data);
+    shoppings.push({ id: data.id, quantity: 1 });
   }
   setCookie(CARD, shoppings);
   return shoppings;
 }
 
-function removeShoppingCart(data) {
+function removeItemFromCart(data) {
   let shopping = getCookie(CARD);
 
-  let filteredData = shopping.filter(
-    (item) => item.product.id !== data.product.product.id
-  );
-
+  let filteredData = shopping.filter((item) => item.id !== data.id);
+  console.log(filteredData);
   setCookie(CARD, filteredData);
   return filteredData;
 }
-// let isExisted = shoppings.some((item) => item.product.id === data.product.id);
-//   if (isExisted) {
-//     shoppings.forEach((item) => {
-//       if (item.product.id === data.product.id) {
-//         item.quantity -= 1;
-//       }
-//       return item;
-//     });
-//   }
 
 function changeQuantity(data) {
   let shopping = getCookie(CARD);
-  let isExisted = shopping.some(
-    (item) => item.product.id === data.product.product.id
-  );
+  let isExisted = shopping.some((item) => item.id === data.id);
   if (isExisted) {
     shopping.forEach((item) => {
-      if (item.product.id === data.product.product.id) {
+      if (item.id === data.id) {
         item.quantity = data.quantity;
-        console.log(data.quantity);
       }
       return item;
     });
-    console.log("tutaj");
-    console.log(shopping);
   }
 
   setCookie(CARD, shopping);
@@ -121,7 +106,7 @@ export default function reducer(state = shopInitialState, action) {
       return state;
     case actionShopping.DELETE:
       state = {
-        shopping: removeShoppingCart(payload),
+        shopping: removeItemFromCart(payload),
       };
       return state;
     case actionShopping.CLEAR:
