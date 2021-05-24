@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { products } from "../../mock/products";
-import CartProduct from "../../components/cart/cartProduct/CartProduct";
+import ProductDetails from "../../components/cart/productDetails/ProductDetails";
 import Layout from "../../components/layout/Layout";
 const ProductDetail = ({ res }) => {
   const router = useRouter();
@@ -15,7 +15,7 @@ const ProductDetail = ({ res }) => {
         Title:{res.title}
         Price:{res.price}
       </div> */}
-        <CartProduct data={res}></CartProduct>
+        <ProductDetails data={res}></ProductDetails>
       </Link>
     </>
   );

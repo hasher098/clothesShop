@@ -1,18 +1,17 @@
-.container{
-    border:1px solid black;
-    margin:15px;
-}
 
-.productImage{
-    border-right: 1px solid black;
-    text-align:center;
+
+.container{
+    margin-Top:20px;
+    border:1px black solid;
 }
 
 .description{
-    
-    border-right: 1px solid black;
+    padding:35px;
 }
 
+.details{
+    
+}
 .price{
     display:flex;
     justify-content: flex-start;
@@ -102,7 +101,7 @@ text-align: center;
     padding:0px;
 }
 
-.deleteFromCartButton{
+.addToCartButton{
     font-size:12px;
     background-color: tan;
     max-width: 126px;
@@ -114,5 +113,3 @@ text-align: center;
     font-size:14px;
     cursor:pointer;
 }
-
-

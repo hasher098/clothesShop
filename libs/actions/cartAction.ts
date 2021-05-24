@@ -29,7 +29,6 @@ export const clearShopping = () => (dispatch) => {
 };
 
 export const deleteItem = (product) => (dispatch) => {
-  console.log(product);
   return dispatch({
     type: actionShopping.DELETE,
     payload: {

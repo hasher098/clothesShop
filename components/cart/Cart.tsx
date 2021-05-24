@@ -7,9 +7,10 @@ import { deleteItem, changeQuantity } from "../../libs/actions/cartAction";
 import { cartContentSelector } from "../../libs/selectors/cartSelector";
 import { useEffect, useState } from "react";
 import Dropdown from "react-dropdown";
+import CartProduct from "./cartProduct/CartProduct";
 import "react-dropdown/style.css";
 
-const Cart = ({ data }) => {
+const Cart = () => {
   const [cartProducts, setCartProducts] = useState([]);
   const cartContent = useSelector(cartContentSelector);
   const options = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -30,7 +31,6 @@ const Cart = ({ data }) => {
         });
       });
       setCartProducts(completeCart);
-      console.log(completeCart);
     }
   };
   useEffect(() => {
@@ -47,32 +47,9 @@ const Cart = ({ data }) => {
   };
   return (
     <div>
-      Koszyk:
       {cartProducts &&
         cartProducts.map((item) => (
-          <div key={item.product.id} className={styles.cartProduct}>
-            <Container>
-              <Row>
-                Item: {item.product.title}
-                <button
-                  onClick={() => {
-                    handleDelete(item);
-                  }}
-                >
-                  Kasuj to
-                </button>
-                Quantity:
-                <Dropdown
-                  options={options}
-                  onChange={(event) => {
-                    handleChange(item, Number(event.value));
-                  }}
-                  value={item.quantity.toString()}
-                  placeholder="Select an option"
-                />
-              </Row>
-            </Container>
-          </div>
+          <CartProduct key={item.product.id} data={item}></CartProduct>
         ))}
     </div>
   );

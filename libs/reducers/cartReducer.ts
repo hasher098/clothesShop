@@ -48,7 +48,6 @@ function getShopping() {
 
 function addShoppingCart(data) {
   let shoppings = getCookie(CARD);
-  console.log(data);
   let isExisted = shoppings.some((item) => item.id === data.id);
   if (isExisted) {
     shoppings.forEach((item) => {
@@ -68,7 +67,6 @@ function removeItemFromCart(data) {
   let shopping = getCookie(CARD);
 
   let filteredData = shopping.filter((item) => item.id !== data.id);
-  console.log(filteredData);
   setCookie(CARD, filteredData);
   return filteredData;
 }
@@ -102,7 +100,6 @@ export default function reducer(state = shopInitialState, action) {
       state = {
         shopping: addShoppingCart(payload),
       };
-      console.log(state);
       return state;
     case actionShopping.DELETE:
       state = {

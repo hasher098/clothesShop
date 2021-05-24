@@ -34,6 +34,7 @@
   .centerPart{
       text-align: center;
     flex-grow:3;
+    cursor:pointer;
   }
 
 
