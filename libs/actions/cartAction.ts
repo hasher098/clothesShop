@@ -12,6 +12,7 @@ export const addShopping = (product, quantity) => (dispatch) => {
     payload: {
       id: product.id,
       quantity: quantity,
+      price: product.price,
     },
   });
 };
@@ -43,6 +44,7 @@ export const changeQuantity = (product, quantity) => (dispatch) => {
     payload: {
       id: product.product.id,
       quantity: quantity,
+      price: product.product.price,
     },
   });
 };

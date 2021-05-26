@@ -12,6 +12,7 @@ import "react-dropdown/style.css";
 
 const Cart = () => {
   const [cartProducts, setCartProducts] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
   const cartContent = useSelector(cartContentSelector);
   const options = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
   const defaultOption = options[0];
@@ -23,6 +24,7 @@ const Cart = () => {
 
     if (cartItems) {
       let completeCart = [];
+
       iDs.map((i1) => {
         cartItems.map((c1) => {
           if (i1.id === c1.id) {
@@ -30,6 +32,12 @@ const Cart = () => {
           }
         });
       });
+      let price = 0;
+      cartContent.forEach((item) => {
+        price += item.totalPrice;
+      });
+
+      setTotalPrice(Number(price.toFixed(2)));
       setCartProducts(completeCart);
     }
   };
@@ -39,19 +47,20 @@ const Cart = () => {
     }
   }, [cartContent]);
 
-  const handleChange = (details, quantity) => {
-    dispatch(changeQuantity(details, quantity));
-  };
-  const handleDelete = (details) => {
-    dispatch(deleteItem(details));
-  };
   return (
-    <div>
-      {cartProducts &&
-        cartProducts.map((item) => (
-          <CartProduct key={item.product.id} data={item}></CartProduct>
-        ))}
-    </div>
+    <Container>
+      <Row>
+        <Col xs={12}>
+          <div>
+            {cartProducts &&
+              cartProducts.map((item) => (
+                <CartProduct key={item.product.id} data={item}></CartProduct>
+              ))}
+          </div>
+        </Col>
+        {totalPrice != 0 && <Col xs={12}>Łączna cena: ${totalPrice}</Col>}
+      </Row>
+    </Container>
   );
 };
 

@@ -10,6 +10,7 @@ import { changeQuantity, deleteItem } from "../../../libs/actions/cartAction";
 
 const CartProduct = (props) => {
   const [quantity, setQuantity] = useState(props.data.quantity);
+  const [totalPrice, setTotalPrice] = useState("");
   const dispatch = useDispatch();
 
   const handleChange = (details, quantity) => {
@@ -19,6 +20,13 @@ const CartProduct = (props) => {
   const handleDelete = (details) => {
     dispatch(deleteItem(details));
   };
+
+  useEffect(() => {
+    const changedString = props.data.product.price.replace("$", "");
+    const totalPrice = Number(changedString) * quantity;
+    setTotalPrice(Number(totalPrice.toFixed(2)).toString());
+  }, [quantity]);
+
   return (
     <Container className={styles.container}>
       <Row>
@@ -79,6 +87,7 @@ const CartProduct = (props) => {
               Usuń z koszyka
             </button>
           </span>
+          <span>Cena:${totalPrice} </span>
         </Col>
       </Row>
     </Container>

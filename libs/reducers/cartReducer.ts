@@ -49,15 +49,22 @@ function getShopping() {
 function addShoppingCart(data) {
   let shoppings = getCookie(CARD);
   let isExisted = shoppings.some((item) => item.id === data.id);
+  const changedString = data.price.replace("$", "");
+  const totalPrice = Number(changedString) * data.quantity;
   if (isExisted) {
     shoppings.forEach((item) => {
       if (item.id === data.id) {
         item.quantity += data.quantity;
+        item.totalPrice = totalPrice;
       }
       return item;
     });
   } else {
-    shoppings.push({ id: data.id, quantity: data.quantity });
+    shoppings.push({
+      id: data.id,
+      quantity: data.quantity,
+      totalPrice: Number(totalPrice.toFixed(2)),
+    });
   }
   setCookie(CARD, shoppings);
   return shoppings;
@@ -74,10 +81,13 @@ function removeItemFromCart(data) {
 function changeQuantity(data) {
   let shopping = getCookie(CARD);
   let isExisted = shopping.some((item) => item.id === data.id);
+  const changedString = data.price.replace("$", "");
+  const totalPrice = Number(changedString) * data.quantity;
   if (isExisted) {
     shopping.forEach((item) => {
       if (item.id === data.id) {
         item.quantity = data.quantity;
+        item.totalPrice = Number(totalPrice.toFixed(2));
       }
       return item;
     });
