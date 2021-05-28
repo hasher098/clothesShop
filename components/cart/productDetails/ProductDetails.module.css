@@ -1,62 +1,91 @@
-
-
-.container{
-    margin-Top:20px;
-    border:1px black solid;
+.container {
+  margin-top: 20px;
+  border: 1px black solid;
+  color: inherit;
 }
 
-.description{
-    padding:35px;
+.container a {
+  color: black;
+  text-decoration: none;
 }
 
-.details{
-    
+.container ul {
+  list-style-type: none;
+  margin-top: 10px;
 }
-.price{
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
+
+.description {
+  padding: 35px;
+}
+
+.details {
+}
+.price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 @media (min-width: 600px) {
-    .imageBox{
-        border-right:1px black solid;
-        padding:25px;
-        text-align:center;
-        height:80%
-    }
+  .imageBox {
+    border-right: 1px black solid;
+    padding: 25px;
+    text-align: center;
+    height: 80%;
   }
-
-
-
-.minusButton{
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    font-size: 13px;
-    padding: 2px;
-    cursor: pointer;
-    color: #000;
-    
-border: 1px black solid;
-text-align: center;
 }
 
-.plusButton{
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    font-size: 13px;
-    padding: 2px;
-    cursor: pointer;
-    color: #000;
-    
-border: 1px black solid;
-text-align: center;
+.minusButton {
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  font-size: 13px;
+  padding: 2px;
+  cursor: pointer;
+  color: #000;
+
+  border: 1px black solid;
+  text-align: center;
 }
 
-.valueInput{
-    max-width:66px;
+.plusButton {
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  font-size: 13px;
+  padding: 2px;
+  cursor: pointer;
+  color: #000;
+
+  border: 1px black solid;
+  text-align: center;
+}
+
+.valueInput {
+  max-width: 66px;
+  height: 30px;
+  font-size: 13px;
+  text-align: center;
+  padding: 2px;
+  background-color: #fff;
+  border-top: 1px solid #372e27;
+  border-bottom: 1px solid #372e27;
+  border-left: 0;
+  border-right: 0;
+  vertical-align: top;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.addCartSpan {
+  padding: 0px;
+  background-color: white;
+  max-width: 66px;
+}
+
+@media (max-width: 800px) {
+  .valueInput {
+    max-width: 40px;
     height: 30px;
     font-size: 13px;
     text-align: center;
@@ -69,47 +98,37 @@ text-align: center;
     vertical-align: top;
     color: #000;
     box-sizing: border-box;
-}
-
-
-.addCartSpan{
-    padding:0px;
-    background-color: white;
-    max-width:66px;
-}
-
-@media (max-width: 800px) {
-    .valueInput{
-        max-width:40px;
-        height: 30px;
-        font-size: 13px;
-        text-align: center;
-        padding: 2px;
-        background-color: #fff;
-        border-top: 1px solid #372e27;
-        border-bottom: 1px solid #372e27;
-        border-left: 0;
-        border-right: 0;
-        vertical-align: top;
-        color: #000;
-        box-sizing: border-box;
-    }
   }
-
-.addCartCol{
-    text-align: center;
-    padding:0px;
 }
 
-.addToCartButton{
-    font-size:12px;
-    background-color: tan;
-    max-width: 126px;
+@media (max-width: 600px) {
+  .container {
+    margin-top: 20px;
+    border: 0px;
+    color: inherit;
+  }
 }
 
-.arleadyInCart{
-    border:1px solid #372e27;
-    padding:10px;
-    font-size:14px;
-    cursor:pointer;
+.addCartCol {
+  text-align: center;
+  padding: 0px;
+}
+
+.addToCartButton {
+  font-size: 12px;
+  background-color: tan;
+  max-width: 126px;
+}
+
+.arleadyInCart {
+  border: 1px solid #372e27;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.descriptionTab {
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid #dee2e6;
 }

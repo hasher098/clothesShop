@@ -14,7 +14,7 @@ const Layout = (props: any) => {
         <AiOutlineMenu className={styles.icon}></AiOutlineMenu>
       </div>
       <div className={styles.centerPart}>
-        <Link href="/clothes">
+        <Link href="/">
           <p>Clothes Shop</p>
         </Link>
       </div>

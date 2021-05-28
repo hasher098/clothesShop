@@ -1,63 +1,84 @@
-.container{
-    border:1px solid black;
-    margin:15px;
+.container {
+  border: 1px solid black;
+  margin: 15px;
 }
 
-.productImage{
-    border-right: 1px solid black;
-    text-align:center;
+.productImage {
+  text-align: center;
+  cursor: pointer;
 }
 
-.description{
-    
-    border-right: 1px solid black;
+.description {
+  border-right: 1px solid black;
 }
 
-.price{
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
+.price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 @media (min-width: 600px) {
-    .imageBox{
-        border-right:1px black solid;
-        padding:25px;
-        text-align:center;
-        height:80%
-    }
+  .imageBox {
+    border-right: 1px black solid;
+    padding: 25px;
+    text-align: center;
+    height: 80%;
   }
-
-
-
-.minusButton{
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    font-size: 13px;
-    padding: 2px;
-    cursor: pointer;
-    color: #000;
-    
-border: 1px black solid;
-text-align: center;
 }
 
-.plusButton{
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    font-size: 13px;
-    padding: 2px;
-    cursor: pointer;
-    color: #000;
-    
-border: 1px black solid;
-text-align: center;
+.minusButton {
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  font-size: 13px;
+  padding: 2px;
+  cursor: pointer;
+  color: #000;
+
+  border: 1px black solid;
+  text-align: center;
 }
 
-.valueInput{
-    max-width:66px;
+.plusButton {
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  font-size: 13px;
+  padding: 2px;
+  cursor: pointer;
+  color: #000;
+
+  border: 1px black solid;
+  text-align: center;
+}
+
+.valueInput {
+  max-width: 66px;
+  height: 30px;
+  font-size: 13px;
+  text-align: center;
+  padding: 2px;
+  background-color: #fff;
+  border-top: 1px solid #372e27;
+  border-bottom: 1px solid #372e27;
+  border-left: 0;
+  border-right: 0;
+  vertical-align: top;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.addCartSpan {
+  padding: 0px;
+  background-color: white;
+  max-width: 66px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .valueInput {
+    max-width: 40px;
     height: 30px;
     font-size: 13px;
     text-align: center;
@@ -70,49 +91,39 @@ text-align: center;
     vertical-align: top;
     color: #000;
     box-sizing: border-box;
-}
-
-
-.addCartSpan{
-    padding:0px;
-    background-color: white;
-    max-width:66px;
-}
-
-@media (max-width: 800px) {
-    .valueInput{
-        max-width:40px;
-        height: 30px;
-        font-size: 13px;
-        text-align: center;
-        padding: 2px;
-        background-color: #fff;
-        border-top: 1px solid #372e27;
-        border-bottom: 1px solid #372e27;
-        border-left: 0;
-        border-right: 0;
-        vertical-align: top;
-        color: #000;
-        box-sizing: border-box;
-    }
   }
-
-.addCartCol{
-    text-align: center;
-    padding:0px;
 }
 
-.deleteFromCartButton{
-    font-size:12px;
-    background-color: tan;
-    max-width: 126px;
+.addCartCol {
+  text-align: center;
+  padding: 0px;
 }
 
-.arleadyInCart{
-    border:1px solid #372e27;
-    padding:10px;
-    font-size:14px;
-    cursor:pointer;
+.deleteFromCartButton {
+  font-size: 12px;
+  background-color: tan;
+  max-width: 126px;
+  width: 100%;
 }
 
+.arleadyInCart {
+  border: 1px solid #372e27;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
 
+.quantityInput {
+  margin-top: 20px;
+}
+
+.priceWrapper {
+  text-align: center;
+  border-right: 1px solid black;
+}
+
+.priceBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

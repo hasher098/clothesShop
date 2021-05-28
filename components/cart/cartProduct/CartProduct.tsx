@@ -1,5 +1,14 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Collapse } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Collapse,
+  Tab,
+  Tabs,
+  TabContainer,
+  TabContent,
+} from "react-bootstrap";
 import styles from "./CartProduct.module.css";
 import Image from "next/image";
 import { cartContentSelector } from "../../../libs/selectors/cartSelector";
@@ -30,23 +39,31 @@ const CartProduct = (props) => {
   return (
     <Container className={styles.container}>
       <Row>
-        <Col md={2} className={styles.productImage}>
-          <Image
-            width="100"
-            height="100"
-            src={props.data.product.image}
-            priority={true}
-            loading="eager"
-          ></Image>
+        <Link href={`/clothes/${encodeURIComponent(props.data.product.id)}`}>
+          <Col md={2} className={styles.productImage}>
+            <Image
+              width="100"
+              height="100"
+              src={props.data.product.image}
+              priority={true}
+              loading="eager"
+            ></Image>
+          </Col>
+        </Link>
+        <Col className={styles.description} md={5}>
+          <Row>
+            <Col xs={6}>
+              <h4>{props.data.product.title}</h4>
+              <h6>{props.data.product.category}</h6>
+            </Col>
+            <Col xs={6} className={styles.priceBox}>
+              <h6>Cena: {props.data.product.price}</h6>
+            </Col>
+          </Row>
         </Col>
-
-        <Col className={styles.description} md={6}>
-          <h5>{props.data.product.title}</h5>
-          <h6>{props.data.product.category}</h6>
-        </Col>
-        <Col md={4}>
+        <Col md={3} className={styles.priceWrapper}>
           <span className={styles.addCartSpan}>
-            <div>
+            <div className={styles.quantityInput}>
               <button
                 onClick={() => {
                   if (quantity > 1) {
@@ -87,7 +104,9 @@ const CartProduct = (props) => {
               Usuń z koszyka
             </button>
           </span>
-          <span>Cena:${totalPrice} </span>
+        </Col>
+        <Col md={2} className={styles.priceBox}>
+          <h6>Suma:${totalPrice} </h6>
         </Col>
       </Row>
     </Container>

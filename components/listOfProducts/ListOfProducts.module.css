@@ -1,35 +1,39 @@
-.unorderedList{
-    list-style-type: none;
-    display:flex;
-    justify-content: center;
-    align-items: center;;
-    padding:0px;
-    margin:0px;
-    margin-right:10px;
+.unorderedList {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  margin-right: 10px;
 }
-.paginationItem{
-    width:40px;
-    height:40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border:1px  lightgray solid;
-    cursor:pointer;
+.paginationItem {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+  cursor: pointer;
 }
-.chosenPage{
-    width:40px;
-    height:40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(236, 234, 233, 0.795);
-    border:1px  lightgray solid;
-    cursor:pointer;
+.chosenPage {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(236, 234, 233, 0.795);
+  border: 1px lightgray solid;
+  cursor: pointer;
 }
 
-.optionBar{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.optionBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-bottom: 150px;
 }

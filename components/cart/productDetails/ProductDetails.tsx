@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Collapse } from "react-bootstrap";
+import { Container, Row, Col, Collapse, Tabs, Tab, Nav } from "react-bootstrap";
 import styles from "./ProductDetails.module.css";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,6 +10,7 @@ const ProductDetails = (props) => {
   const [quantity, setQuantity] = useState(1);
   const cartContent = useSelector(cartContentSelector);
   const [inCart, setInCart] = useState(false);
+  const [key, setKey] = useState("description");
   const dispatch = useDispatch();
   const handleAddToCart = () => {
     dispatch(addShopping(props.data, quantity));
@@ -34,7 +35,7 @@ const ProductDetails = (props) => {
         <Col xs={12} sm={6} className={styles.description}>
           <Row className={styles.details}>
             <h3>{props.data.title}</h3>
-            <p>{props.data.description}</p>
+
             {/* {props.data.category} */}
           </Row>
           <Row className={styles.price}>
@@ -87,6 +88,59 @@ const ProductDetails = (props) => {
                   </button>
                 </span>
               )}
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
+              <Tab.Container
+                id="left-tabs-example"
+                defaultActiveKey="description"
+              >
+                <Row>
+                  <Col xs={12}>
+                    <Nav variant="tabs" className="flex-row">
+                      <Nav.Item>
+                        <Nav.Link
+                          className={styles.descriptionTab}
+                          onSelect={(k) => {
+                            setKey(k);
+                          }}
+                          eventKey="description"
+                        >
+                          Opis
+                        </Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link
+                          className={styles.descriptionTab}
+                          onSelect={(k) => {
+                            setKey(k);
+                          }}
+                          eventKey="delievery"
+                        >
+                          Dostawa
+                        </Nav.Link>
+                      </Nav.Item>
+                    </Nav>
+                  </Col>
+                  <Col xs={12}>
+                    <Tab.Content>
+                      <Tab.Pane eventKey="description">
+                        <p>{props.data.description}</p>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="delievery">
+                        <p>
+                          <ul>
+                            <li>Kurier Przedpłata: 20 zł</li>
+                            <li>Kurier Za pobraniem: 22 zł</li>
+                            <li>Paczkomat: 10zł</li>
+                          </ul>
+                        </p>
+                      </Tab.Pane>
+                    </Tab.Content>
+                  </Col>
+                </Row>
+              </Tab.Container>
             </Col>
           </Row>
         </Col>

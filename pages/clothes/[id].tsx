@@ -9,7 +9,7 @@ const ProductDetail = ({ res }) => {
   return (
     <>
       <Layout></Layout>
-      <Link href="/clothes">
+      <Link href="/">
         {/* <div>
         Id:{res.id}
         Title:{res.title}

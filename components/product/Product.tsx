@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 const Product = (data) => {
   const [isLoading, setIsLoading] = useState(true);
   const [imageClass, setImageClass] = useState("styles.imageHidden");
-
+  console.log(data);
   const handleLoad = () => {};
   return (
     <div className={styles.card}>

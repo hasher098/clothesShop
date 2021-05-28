@@ -7,8 +7,8 @@ import { BiLastPage, BiFirstPage } from "react-icons/bi";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import { Container, Row, Col } from "react-bootstrap";
-const options = ["9", "15", "30"];
-const defaultOption = options[0];
+const options = ["12", "16", "32", "48"];
+const defaultOption = options[1];
 const ListOfProducts = (props: any) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemPerPage] = useState(Number(options[0]));
@@ -35,7 +35,19 @@ const ListOfProducts = (props: any) => {
   }, [props.products, itemsPerPage]);
 
   return (
-    <div>
+    <div className={styles.container}>
+      <Container>
+        <Row>
+          {currentItems &&
+            currentItems.map((item) => {
+              return (
+                <Col key={item.id} xs={12} sm={6} md={3}>
+                  <Product data={item}></Product>
+                </Col>
+              );
+            })}
+        </Row>
+      </Container>
       <div className={styles.optionBar}>
         <ul className={styles.unorderedList}>
           <li
@@ -80,6 +92,7 @@ const ListOfProducts = (props: any) => {
             <BiLastPage></BiLastPage>
           </li>
         </ul>
+        Pokaż na stronie:
         <Dropdown
           options={options}
           onChange={(event) => {
@@ -89,19 +102,6 @@ const ListOfProducts = (props: any) => {
           placeholder="Select an option"
         />
       </div>
-
-      <Container>
-        <Row>
-          {currentItems &&
-            currentItems.map((item) => {
-              return (
-                <Col key={item.id} xs={12} sm={6} md={4}>
-                  <Product data={item}></Product>
-                </Col>
-              );
-            })}
-        </Row>
-      </Container>
     </div>
   );
 };
