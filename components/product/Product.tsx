@@ -1,16 +1,13 @@
-import styles from "./Product.module.css";
-import ProductType from "../../types/ProductType";
 import Image from "next/image";
-import { Container, Row, Col, Collapse } from "react-bootstrap";
-import { useDispatch } from "react-redux";
-import { addShopping } from "../../libs/actions/cartAction";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Col, Container } from "react-bootstrap";
+import styles from "./Product.module.css";
 
 const Product = (data) => {
   const [isLoading, setIsLoading] = useState(true);
   const [imageClass, setImageClass] = useState("styles.imageHidden");
-  console.log(data);
+
   const handleLoad = () => {};
   return (
     <div className={styles.card}>

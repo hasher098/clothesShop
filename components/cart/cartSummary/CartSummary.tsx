@@ -1,20 +1,14 @@
-import styles from "./CartSummary.module.css";
-
-import Image from "next/image";
+import { useState } from "react";
 import {
-  Container,
-  Row,
-  Col,
-  Collapse,
-  Form,
   Button,
+  Col,
+  Container,
+  Form,
   Modal,
+  Row,
   Toast,
 } from "react-bootstrap";
-import { useDispatch } from "react-redux";
-
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import styles from "./CartSummary.module.css";
 
 const Product = (data) => {
   const [delievery, setDelievery] = useState("");
@@ -49,7 +43,7 @@ const Product = (data) => {
               <div key={`radio`}>
                 <Form.Check
                   inline
-                  label="Kurier Przedpłata: 20 $"
+                  label="Kurier Przedpłata: $20"
                   name="group1"
                   type={"radio"}
                   id={`default-radio-1`}
@@ -59,7 +53,7 @@ const Product = (data) => {
                 />
                 <Form.Check
                   inline
-                  label="Kurier Za pobraniem: 22 $"
+                  label="Kurier Za pobraniem: $22"
                   name="group1"
                   type={"radio"}
                   id={`default-radio-2`}
@@ -70,7 +64,7 @@ const Product = (data) => {
                 <Form.Check
                   inline
                   name="group1"
-                  label="Paczkomat: 10$"
+                  label="Paczkomat: $10"
                   type={"radio"}
                   id={`default-radio-3`}
                   onClick={() => {
@@ -118,6 +112,9 @@ const Product = (data) => {
                 />
               </div>
             </Form>
+            <Form.Control.Feedback type="invalid">
+              Należy zaakceptować regulamin
+            </Form.Control.Feedback>
           </Col>
         </Row>
         <Row>
@@ -201,6 +198,7 @@ const Product = (data) => {
                   Podaj adres
                 </Form.Control.Feedback>
               </Form.Group>
+
               <Button
                 onClick={() => {
                   setModalShow(false);
@@ -208,6 +206,15 @@ const Product = (data) => {
               >
                 Cofnij
               </Button>
+              <Form.Group controlId="formCheckBox">
+                <Form.Check.Input required />
+                <Form.Check.Label>
+                  Agree to terms and conditions
+                </Form.Check.Label>
+                <Form.Control.Feedback type="invalid">
+                  Należy zaakceptować regulamin
+                </Form.Control.Feedback>
+              </Form.Group>
               <Button type="submit">Złóż Zamówienie</Button>
             </Form>
           </Modal.Body>

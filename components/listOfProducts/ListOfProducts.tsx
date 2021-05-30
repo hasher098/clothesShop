@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import styles from "./ListOfProducts.module.css";
-import Product from "../product/Product";
-import ProductType from "../../types/ProductType";
-import { GrFormPrevious, GrFormNext } from "react-icons/gr";
-import { BiLastPage, BiFirstPage } from "react-icons/bi";
+import { Col, Container, Row } from "react-bootstrap";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { BiFirstPage, BiLastPage } from "react-icons/bi";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import Product from "../product/Product";
+import styles from "./ListOfProducts.module.css";
 const options = ["12", "16", "32", "48"];
 const defaultOption = options[1];
 const ListOfProducts = (props: any) => {

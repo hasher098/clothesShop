@@ -1,20 +1,11 @@
-import { useState, useEffect } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Collapse,
-  Tabs,
-  Tab,
-  Nav,
-  Toast,
-} from "react-bootstrap";
-import styles from "./ProductDetails.module.css";
 import Image from "next/image";
-import { useDispatch, useSelector } from "react-redux";
-import { cartContentSelector } from "../../../libs/selectors/cartSelector";
-import { addShopping } from "../../../libs/actions/cartAction";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Col, Container, Nav, Row, Tab, Toast } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { addShopping } from "../../../libs/actions/cartAction";
+import { cartContentSelector } from "../../../libs/selectors/cartSelector";
+import styles from "./ProductDetails.module.css";
 const ProductDetails = (props) => {
   const [quantity, setQuantity] = useState(1);
   const cartContent = useSelector(cartContentSelector);

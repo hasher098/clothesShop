@@ -1,21 +1,10 @@
-import { useState, useEffect } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Collapse,
-  Tab,
-  Tabs,
-  TabContainer,
-  TabContent,
-} from "react-bootstrap";
-import styles from "./CartProduct.module.css";
 import Image from "next/image";
-import { cartContentSelector } from "../../../libs/selectors/cartSelector";
-import { addShopping } from "../../../libs/actions/cartAction";
 import Link from "next/link";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { useDispatch } from "react-redux";
 import { changeQuantity, deleteItem } from "../../../libs/actions/cartAction";
+import styles from "./CartProduct.module.css";
 
 const CartProduct = (props) => {
   const [quantity, setQuantity] = useState(props.data.quantity);

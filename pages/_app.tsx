@@ -1,10 +1,10 @@
-import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { wrapper } from "../store/index";
-import NProgress from "nprogress";
 import Router from "next/router";
+import NProgress from "nprogress";
 import "nprogress/nprogress.css";
-import React, { FC } from "react";
+import React from "react";
+import { wrapper } from "../store/index";
+import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }

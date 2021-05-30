@@ -1,18 +1,11 @@
-import styles from "./Layout.module.css";
 import Link from "next/link";
-import {
-  AiOutlineMenu,
-  AiOutlineSearch,
-  AiOutlineShoppingCart,
-  AiOutlineUser,
-} from "react-icons/ai";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import styles from "./Layout.module.css";
 
 const Layout = (props: any) => {
   return (
     <div className={styles.navBar}>
-      <div className={styles.leftPart}>
-        {/* <AiOutlineMenu className={styles.icon}></AiOutlineMenu> */}
-      </div>
+      <div className={styles.leftPart}></div>
       <div className={styles.centerPart}>
         <Link href="/">
           <p>Clothes Shop</p>

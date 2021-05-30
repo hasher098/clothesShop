@@ -1,8 +1,8 @@
-import { useRouter } from "next/router";
 import Link from "next/link";
-import { products } from "../../mock/products";
+import { useRouter } from "next/router";
 import ProductDetails from "../../components/cart/productDetails/ProductDetails";
 import Layout from "../../components/layout/Layout";
+import { products } from "../../mock/products";
 const ProductDetail = ({ res }) => {
   const router = useRouter();
   const { id } = router.query;
@@ -10,11 +10,6 @@ const ProductDetail = ({ res }) => {
     <>
       <Layout></Layout>
       <Link href="/">
-        {/* <div>
-        Id:{res.id}
-        Title:{res.title}
-        Price:{res.price}
-      </div> */}
         <ProductDetails data={res}></ProductDetails>
       </Link>
     </>

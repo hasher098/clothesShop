@@ -1,15 +1,10 @@
-import styles from "./Cart.module.css";
-import ProductType from "../../types/ProductType";
-import Image from "next/image";
-import { Container, Row, Col } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
-import { deleteItem, changeQuantity } from "../../libs/actions/cartAction";
-import { cartContentSelector } from "../../libs/selectors/cartSelector";
 import { useEffect, useState } from "react";
-import CartSummary from "./cartSummary/CartSummary";
-import Dropdown from "react-dropdown";
-import CartProduct from "./cartProduct/CartProduct";
+import { Col, Container, Row } from "react-bootstrap";
 import "react-dropdown/style.css";
+import { useDispatch, useSelector } from "react-redux";
+import { cartContentSelector } from "../../libs/selectors/cartSelector";
+import CartProduct from "./cartProduct/CartProduct";
+import CartSummary from "./cartSummary/CartSummary";
 
 const Cart = () => {
   const [cartProducts, setCartProducts] = useState([]);
