@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Description
 
-## Getting Started
+It is an application created with React,Redux and Next.js. Designed and created to show my knowledge of these technologies. This application has basic functions such as: products overview, adding them to the cart and summary in the cart. The address where you can see the application in action is [Link](https://clothes-shop-tan.vercel.app) `vercel`.
 
-First, run the development server:
+## Run Application
 
-```bash
-npm run dev
-# or
-yarn dev
+Install all packages
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run application in dev mode
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+npm run dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Folder Structure
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+    .
+    ├── components               # Folder with components
+    ├── config                   # Config files like server config
+    ├── libs                     # Reducers,actions and selectors for redux
+    ├── mock                     # Mocked data
+    ├── pages                    # Next.js pages
+    ├── public                   # Images etc.
+    ├── store                    # Store index.ts
+    ├── styles                   # Stylings files (module.css)
+    ├── types                    # Typescript types
 
-## Learn More
+## All technologies used in this project
 
-To learn more about Next.js, take a look at the following resources:
+###### React - open source front-end library
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+###### Redux - JavaScript library for managing application state
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+###### React-bootstrap - library with JavaScript bootstrap and some useful components
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+###### Next.js - React framework created by Vercel that enables funcationality such as server-side rendering
