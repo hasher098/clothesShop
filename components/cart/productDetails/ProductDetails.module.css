@@ -132,3 +132,9 @@
   border: 0px;
   border-bottom: 1px solid #dee2e6;
 }
+
+.toastInfo {
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+}

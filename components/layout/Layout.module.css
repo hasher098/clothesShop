@@ -1,50 +1,46 @@
 .container {
-    min-height: 100vh;
-    padding: 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vh;
+}
 
-  .navBar{
-      overflow:hidden;
-      top:0;
-      width:100%;
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family:"Montserrat";
-    font-size: 28px;
-    border-bottom:1px solid gray;
+.navBar {
+  overflow: hidden;
+  top: 0;
 
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat";
+  font-size: 28px;
+  border-bottom: 1px solid gray;
+}
 
-   .icon{
-      cursor:pointer;
-      margin-right:15px;
-  }
+.icon {
+  cursor: pointer;
+  margin-right: 15px;
+}
 
-  .leftPart{
-    flex-grow: 1;
-    padding:15px;
-  }
+.leftPart {
+  flex-grow: 1;
+  padding: 15px;
+}
 
-  .centerPart{
-      text-align: center;
-    flex-grow:3;
-    cursor:pointer;
-  }
+.centerPart {
+  text-align: center;
+  flex-grow: 3;
+  cursor: pointer;
+}
 
+.rightPart {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
 
-
-  .rightPart{
-    flex-grow:1;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .rightPart .icon{
-
-  }
+.rightPart {
+}

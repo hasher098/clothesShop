@@ -36,7 +36,7 @@ const ListOfProducts = (props: any) => {
 
   return (
     <div className={styles.container}>
-      <Container>
+      <Container fluid>
         <Row>
           {currentItems &&
             currentItems.map((item) => {
