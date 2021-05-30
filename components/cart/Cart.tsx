@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteItem, changeQuantity } from "../../libs/actions/cartAction";
 import { cartContentSelector } from "../../libs/selectors/cartSelector";
 import { useEffect, useState } from "react";
+import CartSummary from "./cartSummary/CartSummary";
 import Dropdown from "react-dropdown";
 import CartProduct from "./cartProduct/CartProduct";
 import "react-dropdown/style.css";
@@ -58,7 +59,11 @@ const Cart = () => {
               ))}
           </div>
         </Col>
-        {totalPrice != 0 && <Col xs={12}>Łączna cena: ${totalPrice}</Col>}
+        {totalPrice != 0 && (
+          <Col xs={12}>
+            <CartSummary price={totalPrice}></CartSummary>
+          </Col>
+        )}
       </Row>
     </Container>
   );

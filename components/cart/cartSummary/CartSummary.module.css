@@ -1,0 +1,20 @@
+.container {
+  border: 1px solid #372e27;
+  margin: 15px;
+  border: 1px black solid;
+  color: inherit;
+}
+
+.totalPrice {
+  text-align: left;
+}
+
+.summary {
+  text-align: center;
+  border-bottom: 1px solid #372e27;
+  background: #eae5e1;
+}
+
+.delievery {
+  border-bottom: 1px solid #372e27;
+}
