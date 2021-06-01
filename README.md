@@ -2,6 +2,10 @@
 
 It is an application created with React,Redux and Next.js. Designed and created to show my knowledge of these technologies. This application has basic functions such as: products overview, adding them to the cart and summary in the cart. The address where you can see the application in action is [Link](https://clothes-shop-tan.vercel.app) `vercel`.
 
+# Screenshots
+![clothesShop1](https://user-images.githubusercontent.com/48457306/120400900-1b1a5a80-c33f-11eb-92b6-29e93fb16c96.jpg)
+![clothesShop2](https://user-images.githubusercontent.com/48457306/120400905-1c4b8780-c33f-11eb-9e26-b5f15a6bed0b.jpg)
+![clothesShop3](https://user-images.githubusercontent.com/48457306/120400907-1d7cb480-c33f-11eb-8e0f-3d0771d6a4b8.jpg)
 ## Run Application
 
 Install all packages
